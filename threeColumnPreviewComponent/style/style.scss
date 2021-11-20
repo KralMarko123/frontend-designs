@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+$Brightorange: hsl(31, 77%, 52%);
+$Darkcyan: hsl(184, 100%, 22%);
+$Verydarkcyan: hsl(179, 100%, 13%);
+
+/*paragraphs*/
+$Transparentwhite: hsla(0, 0%, 100%, 0.75);
+// (background, headings, buttons)
+$Verylightgray: hsl(0, 0%, 95%);
+
+.orange {
+  color: $Brightorange;
+}
+
+.darkCyan {
+  color: $Darkcyan;
+}
+
+.veryDarkCyan {
+  color: $Verydarkcyan;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $Verylightgray;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  width: 85%;
+}
+
+.column {
+  height: 650px;
+  background-color: $Darkcyan;
+
+  &:nth-of-type(1) {
+    background-color: $Brightorange;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  &:nth-of-type(3) {
+    background-color: $Verydarkcyan;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  padding: 50px;
+}
+
+.carIcon {
+  transform: translateX(15px) scale(1.5);
+}
+
+.columnTitle {
+  color: $Verylightgray;
+  font-weight: 700;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+
+  font-size: 2.8rem;
+
+  margin-top: 30px;
+}
+
+.columnText {
+  color: $Transparentwhite;
+
+  width: 80%;
+  line-height: 2rem;
+
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.columnButton {
+  background-color: $Verylightgray;
+
+  width: 50%;
+
+  border: 2px solid $Verylightgray;
+  padding: 20px;
+  border-radius: 30px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    color: white;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 1279px) {
+  body {
+    height: fit-content;
+  }
+
+  .container {
+    flex-direction: column;
+
+    width: 90%;
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .column {
+    height: 650px;
+
+    &:nth-of-type(1) {
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0;
+    }
+    &:nth-of-type(3) {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 10px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 30px;
+    padding-left: 50px;
+  }
+
+  .carIcon {
+    transform: translateX(10px) scale(1.3);
+  }
+
+  .columnTitle {
+    margin-top: 15px;
+  }
+
+  .columnText {
+    width: 85%;
+    line-height: 1.8rem;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .columnButton {
+    width: 65%;
+
+    padding: 15px;
+  }
+}

@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700;200&display=swap");
+@media (max-width: 1279px) {
+  body {
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: relative;
+  }
+  .card {
+    width: 90%;
+    height: 90%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: hidden;
+  }
+  .card .top,
+  .card .bottom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .card .top {
+    height: 25%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 6.825%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .card .top .mainTitle {
+    font-size: 1.425rem;
+    margin-bottom: 8.625%;
+  }
+  .card .top .subTitle {
+    font-size: 1.125rem;
+    margin-bottom: 8.625%;
+  }
+  .card .top .desc {
+    font-size: 0.965rem;
+    padding-right: 0%;
+    line-height: 1.65;
+  }
+  .card .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 75%;
+  }
+  .card .bottom .left,
+  .card .bottom .right {
+    height: 100%;
+    width: 100%;
+    padding: 6.125%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .card .bottom .left .subscribeTitle {
+    font-size: 18.125px;
+    letter-spacing: 0.325px;
+  }
+  .card .bottom .left .price {
+    margin-top: 4.625%;
+    margin-bottom: 2.625%;
+    font-size: 2.25rem;
+  }
+  .card .bottom .left .price::after {
+    font-size: 0.925rem;
+    right: 0%;
+    left: 28.625%;
+  }
+  .card .bottom .left .access {
+    font-size: 0.925rem;
+    opacity: 0.865;
+    letter-spacing: 0.625px;
+    margin-bottom: 8.625%;
+  }
+  .card .bottom .left .signUp {
+    padding: 5.625%;
+    font-size: 1.025rem;
+  }
+  .card .bottom .right .rightTitle {
+    font-size: 18.125px;
+    letter-spacing: 0.425px;
+    margin-bottom: 5.625%;
+  }
+  .card .bottom .right .reasonList .reason {
+    font-size: 0.925rem;
+    font-weight: 200;
+    letter-spacing: 0.125px;
+    opacity: 0.725;
+    line-height: 1.325;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/*VARIABLES*/
+/*
+* COLORS 
+*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+P {
+  font-size: 16px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+}
+
+.container {
+  width: 1440px;
+  height: 90%;
+  position: relative;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e0e8ff;
+}
+
+.backgroundCutout {
+  position: absolute;
+  top: 0;
+}
+
+.card {
+  width: 35%;
+  height: 85%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 50px 80px -50px #7280a7;
+          box-shadow: 0px 50px 80px -50px #7280a7;
+}
+
+.heroSection {
+  width: 100%;
+  height: 40%;
+  background: url(../images/illustration-hero.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.orderSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 35px;
+  background-color: white;
+}
+
+.orderTitle {
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.orderText {
+  color: #7280a7;
+  text-align: center;
+  width: 70%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.innerSection {
+  width: 80%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f7ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.musicIcon {
+  width: 20%;
+}
+
+.annualPlanSection {
+  width: 60%;
+}
+
+.changeLink {
+  width: 20%;
+  color: #3829e0;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.changeLink:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.planTitle {
+  color: #1f2f56;
+  font-weight: 900;
+}
+
+.planPrice {
+  margin-top: 5px;
+  color: #7280a7;
+}
+
+.paymentButton {
+  width: 80%;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #3829e0;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  -webkit-box-shadow: 0px 10px 50px -10px #7280a7;
+          box-shadow: 0px 10px 50px -10px #7280a7;
+}
+
+.paymentButton:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cancelOrderLink {
+  color: #7280a7;
+  font-weight: 700;
+}
+
+.cancelOrderLink:hover {
+  color: #1f2f56;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+  }
+  .backgroundCutout {
+    position: absolute;
+    top: -200px;
+  }
+  .card {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .heroSection {
+    width: 100%;
+    height: 30%;
+  }
+  .orderSection {
+    padding: 10px;
+    width: 100%;
+    height: 70%;
+  }
+  .orderTitle {
+    font-size: 1.4rem;
+  }
+  .orderText {
+    width: 85%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .innerSection {
+    width: 90%;
+    height: 80px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .musicIcon {
+    margin-right: 10px;
+  }
+  .planPrice {
+    margin-top: 5px;
+  }
+  .paymentButton {
+    width: 90%;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=root.css.map */

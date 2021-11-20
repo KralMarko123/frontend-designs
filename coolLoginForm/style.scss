@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Anton", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background: rgb(255, 204, 34);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 204, 34, 1) 0%,
+    rgba(144, 75, 30, 1) 100%
+  );
+}
+
+.logInForm {
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formTitle {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: white;
+
+  z-index: 3;
+  transition: all 1s ease-in-out;
+}
+
+.formInput {
+  width: 20%;
+  height: 60px;
+  border-radius: 5px;
+  color: white;
+
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.25);
+
+  outline: none;
+
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    background-color: white;
+    color: rgb(144, 75, 30);
+    width: 25%;
+  }
+
+  &:focus::placeholder {
+    transition: all 0.25s ease-in-out;
+    opacity: 0;
+  }
+}
+
+.formInput:nth-of-type(2) {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.formSubmit {
+  width: 20%;
+  height: 60px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  color: rgb(144, 75, 30);
+
+  border: none;
+  background-color: white;
+
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    letter-spacing: 2px;
+    cursor: pointer;
+    background-color: whitesmoke;
+  }
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+$flag: false;
+@for $i from 1 to 20 {
+  .bubble:nth-child(#{$i}) {
+    position: absolute;
+
+    @if $flag == false {
+      left: 250px + ($i * 50px / random($limit: 7));
+
+      width: 20px + ($i * 20px);
+      height: 20px + ($i * 20px);
+      bottom: -(20px + ($i * 20px));
+
+      $flag: true;
+    } @else {
+      right: 300px + ($i * 20px);
+
+      width: 20px + ($i * 10px);
+      height: 20px + ($i * 10px);
+      bottom: -(20px + ($i * 10px));
+
+      $flag: false;
+    }
+    animation: slideUpPC 25s infinite;
+    animation-delay: ($i * 1s) + random($limit: 10);
+
+    background-color: rgba($color: white, $alpha: 0.2);
+  }
+}
+
+@keyframes slideUpPC {
+  0% {
+  }
+
+  100% {
+    transform: translateY(-1400px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpTablet {
+  0% {
+  }
+
+  100% {
+    transform: translateY(-1100px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpMobile {
+  0% {
+  }
+
+  100% {
+    transform: translateY(-800px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .logInForm {
+    width: 80%;
+  }
+
+  .formInput {
+    width: 80%;
+
+    &:focus {
+      width: 100%;
+    }
+  }
+
+  .formSubmit {
+    width: 80%;
+  }
+
+  $flag: false;
+  @for $i from 1 to 20 {
+    .bubble:nth-child(#{$i}) {
+      position: absolute;
+
+      @if $flag == false {
+        left: 20px + ($i * 20px / random($limit: 5));
+
+        width: 20px + ($i * 5px);
+        height: 20px + ($i * 5px);
+        bottom: -(20px + ($i * 5px));
+
+        $flag: true;
+      } @else {
+        right: 30px + ($i * 20px);
+
+        width: 20px + ($i * 10px);
+        height: 20px + ($i * 10px);
+        bottom: -(20px + ($i * 10px));
+
+        $flag: false;
+      }
+      animation: slideUpMobile 20s infinite;
+      animation-delay: ($i * 1s) + random($limit: 3);
+
+      background-color: rgba($color: white, $alpha: 0.2);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .logInForm {
+    width: 80%;
+  }
+
+  .formInput {
+    width: 80%;
+
+    &:focus {
+      width: 100%;
+    }
+  }
+
+  .formSubmit {
+    width: 80%;
+  }
+
+  $flag: false;
+  @for $i from 1 to 20 {
+    .bubble:nth-child(#{$i}) {
+      position: absolute;
+
+      @if $flag == false {
+        left: 200px + ($i * 30px / random($limit: 5));
+
+        width: 20px + ($i * 10px);
+        height: 20px + ($i * 10px);
+        bottom: -(20px + ($i * 10px));
+
+        $flag: true;
+      } @else {
+        right: 250px + ($i * 15px);
+
+        width: 20px + ($i * 20px);
+        height: 20px + ($i * 20px);
+        bottom: -(20px + ($i * 20px));
+
+        $flag: false;
+      }
+      animation: slideUpTablet 20s infinite;
+      animation-delay: ($i * 1s) + random($limit: 4);
+
+      background-color: rgba($color: white, $alpha: 0.2);
+    }
+  }
+}

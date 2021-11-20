@@ -1,0 +1,129 @@
+@media (max-width: 1279px) {
+  p {
+    font-size: 16px;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    position: relative;
+    background: url(../images/bg-intro-mobile.png);
+    background-color: #ff7a7a;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: transparent;
+  }
+  .container .left,
+  .container .right {
+    text-align: center;
+  }
+  .container .left {
+    padding: 0%;
+    padding-right: 0%;
+  }
+  .container .left .title,
+  .container .left .desc {
+    color: white;
+  }
+  .container .left .title {
+    font-size: 2rem;
+  }
+  .container .left .desc {
+    padding: 0%;
+    padding-left: 6.625%;
+    padding-right: 6.625%;
+    font-size: 14.125px;
+  }
+  .container .right {
+    margin-top: 11.125%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .right .formTop {
+    width: 90%;
+    padding: 6.625%;
+    padding-left: 18.125%;
+    padding-right: 18.125%;
+    margin-bottom: 7.625%;
+  }
+  .container .right .formTop .price {
+    color: white;
+  }
+  .container .right .formTop .price .bold {
+    font-weight: 600;
+  }
+  .container .right .formContainer {
+    padding: 6.125%;
+    width: 90%;
+    z-index: 1;
+    -webkit-box-shadow: 0px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 10px rgba(0, 0, 0, 0.15);
+  }
+  .container .right .formContainer .inputContainer {
+    margin-top: 3.625%;
+    margin-bottom: 3.625%;
+  }
+  .container .right .formContainer .inputContainer .inputBar {
+    width: 100%;
+    padding: 5%;
+    padding-left: 6.625%;
+    border-radius: 10px;
+    font-size: 15.625px;
+  }
+  .container .right .formContainer .inputContainer .inputBar::-webkit-input-placeholder {
+    color: #3e3c49;
+  }
+  .container .right .formContainer .inputContainer .inputBar:-ms-input-placeholder {
+    color: #3e3c49;
+  }
+  .container .right .formContainer .inputContainer .inputBar::-ms-input-placeholder {
+    color: #3e3c49;
+  }
+  .container .right .formContainer .inputContainer .inputBar::placeholder {
+    color: #3e3c49;
+  }
+  .container .right .formContainer .inputContainer .inputBar:focus {
+    caret-color: #6055a5;
+    border: solid 1px #6055a5;
+  }
+  .container .right .formContainer .inputContainer::after {
+    bottom: -35%;
+    font-size: 11.125px;
+    letter-spacing: 0.125px;
+  }
+  .container .right .formContainer .inputContainer::before {
+    top: 35%;
+    width: 20px;
+    height: 20px;
+  }
+  .container .right .formButton {
+    padding: 6.125%;
+    padding-left: 4.125%;
+    padding-right: 4.125%;
+    margin-top: 3.625%;
+    margin-bottom: 3.625%;
+    font-weight: 500;
+    letter-spacing: 0.825px;
+  }
+  .container .right .buttonMessage {
+    font-size: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .inputBarError {
+    margin-bottom: 6.125% !important;
+  }
+  .inputBarError .inputBar {
+    border: solid 2px #ff7a7a !important;
+  }
+}
+/*# sourceMappingURL=mobileStyle.css.map */

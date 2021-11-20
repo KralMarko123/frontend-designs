@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+$DesaturatedRed: hsl(0, 36%, 70%);
+$SoftRed: hsl(0, 93%, 68%);
+$DarkGrayishRed: hsl(0, 6%, 24%);
+
+/*GRADIENTS**
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+html,
+body,
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+
+  .mobileHeader {
+    display: none;
+  }
+
+  .logo {
+    position: absolute;
+    top: -35%;
+    left: 0;
+
+    width: 32.5%;
+    height: 12.5%;
+    background: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .left {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6.5%;
+    padding-top: 11.625%;
+
+    background: url(../images/bg-pattern-desktop.svg),
+      linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    // linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    .formContainer {
+      margin-right: 12.5%;
+      width: 60%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      position: relative;
+
+      .title {
+        font-size: 5rem;
+        text-transform: uppercase;
+        letter-spacing: 20px;
+
+        color: $DarkGrayishRed;
+
+        z-index: 2;
+
+        width: 100%;
+
+        .highlight {
+          font-size: 5rem;
+          font-weight: 200;
+          color: $DesaturatedRed;
+        }
+      }
+      .desc {
+        width: 100%;
+
+        align-self: flex-start;
+
+        font-size: 17.125px;
+        color: $DesaturatedRed;
+        line-height: 2;
+
+        margin-top: 3.625%;
+        margin-bottom: 5%;
+        padding-right: 10%;
+      }
+
+      .inputContainer {
+        width: 100%;
+
+        position: relative;
+
+        .inputBar {
+          align-self: flex-start;
+
+          width: 100%;
+          padding: 4.125%;
+          padding-left: 6.5%;
+
+          border-radius: 50px;
+
+          font-size: 16px;
+
+          &::placeholder {
+            color: $DesaturatedRed;
+          }
+
+          background: transparent;
+          border: 1px solid $DesaturatedRed;
+          outline: none;
+
+          transition: all 0.25s ease-in-out;
+        }
+
+        .arrowIcon {
+          position: absolute;
+          right: 0;
+          top: 0;
+
+          width: 20%;
+          height: 100%;
+          border-radius: 50px;
+
+          background: url(../images/icon-arrow.svg),
+            linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+          background-repeat: no-repeat;
+          background-position: center;
+
+          box-shadow: 0px 10px 30px -10px $DesaturatedRed;
+          transform: scale(1.035);
+
+          transition: all 0.25s ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            filter: brightness(105%);
+            opacity: 0.95;
+
+            box-shadow: 0px 15px 35px -7.5px $DesaturatedRed;
+          }
+        }
+
+        .errorIcon {
+          position: absolute;
+          right: 22.5%;
+          top: 0;
+
+          width: 50px;
+          height: 100%;
+
+          background: url(../images/icon-error.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+
+          transition: all 0.25s ease-in-out;
+
+          opacity: 0;
+        }
+
+        .errorMessage {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+
+          margin-top: 2.5%;
+          padding-left: 6.5%;
+
+          font-size: 14.625px;
+          letter-spacing: 0.25px;
+          color: $SoftRed;
+
+          opacity: 0;
+
+          transition: all 0.25s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .right {
+    height: 100%;
+    width: 45%;
+
+    background-image: url(../images/hero-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/*MOBILE CSS*/
+
+@media (max-width: 1279px) {
+  body {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+
+  .main {
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: column-reverse;
+
+    overflow: hidden;
+
+    .mobileHeader {
+      display: block;
+      width: 100%;
+      min-height: 80px;
+      height: 25%;
+
+      background-color: white;
+      background-image: url(../images/logo.svg);
+      background-size: 30%;
+      background-position: 10% 50%;
+      background-repeat: no-repeat;
+    }
+
+    .left {
+      width: 100%;
+      min-height: fit-content;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 7.5%;
+      padding-top: 17.5%;
+      padding-bottom: 25%;
+      margin: 0;
+
+      background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+      // linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      position: relative;
+
+      .formContainer {
+        margin: 0;
+        padding: 0%;
+        margin-right: 0%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        position: relative;
+
+        .logo {
+          display: none;
+        }
+
+        .title {
+          font-size: 2.4rem;
+          letter-spacing: 8.125px;
+          text-align: center;
+
+          .highlight {
+            text-align: center;
+            font-size: 2.4rem;
+          }
+        }
+        .desc {
+          text-align: center;
+          align-self: center;
+
+          font-size: 14px;
+          color: $DesaturatedRed;
+          line-height: 1.6;
+
+          margin-top: 5%;
+          margin-bottom: 10%;
+          padding-right: 0%;
+        }
+
+        .inputContainer {
+          .inputBar {
+            width: 100%;
+            padding: 4%;
+            padding-left: 5%;
+            font-size: 13.125px;
+          }
+
+          .arrowIcon {
+            box-shadow: 0px 5px 30px -5px $DesaturatedRed;
+
+            &:hover {
+              box-shadow: 0px 10px 40px -5px $DesaturatedRed;
+            }
+          }
+
+          .errorIcon {
+            transform: scale(0.75);
+            right: 18.625%;
+
+            opacity: 0;
+          }
+
+          .errorMessage {
+            text-align: center;
+
+            margin-top: 3.125%;
+            padding-left: 0%;
+
+            font-size: 14px;
+            letter-spacing: 0.125px;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      min-height: 250px;
+      height: 30%;
+
+      background-image: url(../images/hero-mobile.jpg);
+      background-position: left center;
+    }
+  }
+}

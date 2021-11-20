@@ -1,0 +1,933 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Anton", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: #ffcc22;
+  background: linear-gradient(160deg, #ffcc22 0%, #904b1e 100%);
+}
+
+.logInForm {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formTitle {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: white;
+  z-index: 3;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.formInput {
+  width: 20%;
+  height: 60px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.25);
+  outline: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.formInput:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.formInput:focus {
+  background-color: white;
+  color: #904b1e;
+  width: 25%;
+}
+
+.formInput:focus::-webkit-input-placeholder {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.formInput:focus:-ms-input-placeholder {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.formInput:focus::-ms-input-placeholder {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.formInput:focus::placeholder {
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.formInput:nth-of-type(2) {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.formSubmit {
+  width: 20%;
+  height: 60px;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  color: #904b1e;
+  border: none;
+  background-color: white;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.formSubmit:hover {
+  letter-spacing: 2px;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bubble:nth-child(1) {
+  position: absolute;
+  left: 260px;
+  width: 40px;
+  height: 40px;
+  bottom: -40px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(2) {
+  position: absolute;
+  right: 340px;
+  width: 40px;
+  height: 40px;
+  bottom: -40px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(3) {
+  position: absolute;
+  left: 300px;
+  width: 80px;
+  height: 80px;
+  bottom: -80px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(4) {
+  position: absolute;
+  right: 380px;
+  width: 60px;
+  height: 60px;
+  bottom: -60px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(5) {
+  position: absolute;
+  left: 312.5px;
+  width: 120px;
+  height: 120px;
+  bottom: -120px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(6) {
+  position: absolute;
+  right: 420px;
+  width: 80px;
+  height: 80px;
+  bottom: -80px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(7) {
+  position: absolute;
+  left: 337.5px;
+  width: 160px;
+  height: 160px;
+  bottom: -160px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(8) {
+  position: absolute;
+  right: 460px;
+  width: 100px;
+  height: 100px;
+  bottom: -100px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(9) {
+  position: absolute;
+  left: 475px;
+  width: 200px;
+  height: 200px;
+  bottom: -200px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(10) {
+  position: absolute;
+  right: 500px;
+  width: 120px;
+  height: 120px;
+  bottom: -120px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(11) {
+  position: absolute;
+  left: 525px;
+  width: 240px;
+  height: 240px;
+  bottom: -240px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 13s;
+          animation-delay: 13s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(12) {
+  position: absolute;
+  right: 540px;
+  width: 140px;
+  height: 140px;
+  bottom: -140px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 22s;
+          animation-delay: 22s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(13) {
+  position: absolute;
+  left: 412.5px;
+  width: 280px;
+  height: 280px;
+  bottom: -280px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 22s;
+          animation-delay: 22s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(14) {
+  position: absolute;
+  right: 580px;
+  width: 160px;
+  height: 160px;
+  bottom: -160px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 23s;
+          animation-delay: 23s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(15) {
+  position: absolute;
+  left: 1000px;
+  width: 320px;
+  height: 320px;
+  bottom: -320px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(16) {
+  position: absolute;
+  right: 620px;
+  width: 180px;
+  height: 180px;
+  bottom: -180px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 25s;
+          animation-delay: 25s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(17) {
+  position: absolute;
+  left: 462.5px;
+  width: 360px;
+  height: 360px;
+  bottom: -360px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 19s;
+          animation-delay: 19s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(18) {
+  position: absolute;
+  right: 660px;
+  width: 200px;
+  height: 200px;
+  bottom: -200px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 19s;
+          animation-delay: 19s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(19) {
+  position: absolute;
+  left: 725px;
+  width: 400px;
+  height: 400px;
+  bottom: -400px;
+  -webkit-animation: slideUpPC 25s infinite;
+          animation: slideUpPC 25s infinite;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@-webkit-keyframes slideUpPC {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(-1400px) rotate(600deg);
+            transform: translateY(-1400px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpPC {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(-1400px) rotate(600deg);
+            transform: translateY(-1400px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideUpTablet {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(-1100px) rotate(600deg);
+            transform: translateY(-1100px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpTablet {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(-1100px) rotate(600deg);
+            transform: translateY(-1100px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideUpMobile {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(-800px) rotate(600deg);
+            transform: translateY(-800px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpMobile {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(-800px) rotate(600deg);
+            transform: translateY(-800px) rotate(600deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .logInForm {
+    width: 80%;
+  }
+  .formInput {
+    width: 80%;
+  }
+  .formInput:focus {
+    width: 100%;
+  }
+  .formSubmit {
+    width: 80%;
+  }
+  .bubble:nth-child(1) {
+    position: absolute;
+    left: 26.66667px;
+    width: 25px;
+    height: 25px;
+    bottom: -25px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(2) {
+    position: absolute;
+    right: 70px;
+    width: 40px;
+    height: 40px;
+    bottom: -40px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(3) {
+    position: absolute;
+    left: 35px;
+    width: 35px;
+    height: 35px;
+    bottom: -35px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(4) {
+    position: absolute;
+    right: 110px;
+    width: 60px;
+    height: 60px;
+    bottom: -60px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 7s;
+            animation-delay: 7s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(5) {
+    position: absolute;
+    left: 120px;
+    width: 45px;
+    height: 45px;
+    bottom: -45px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(6) {
+    position: absolute;
+    right: 150px;
+    width: 80px;
+    height: 80px;
+    bottom: -80px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(7) {
+    position: absolute;
+    left: 48px;
+    width: 55px;
+    height: 55px;
+    bottom: -55px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(8) {
+    position: absolute;
+    right: 190px;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 11s;
+            animation-delay: 11s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(9) {
+    position: absolute;
+    left: 110px;
+    width: 65px;
+    height: 65px;
+    bottom: -65px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(10) {
+    position: absolute;
+    right: 230px;
+    width: 120px;
+    height: 120px;
+    bottom: -120px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 11s;
+            animation-delay: 11s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(11) {
+    position: absolute;
+    left: 64px;
+    width: 75px;
+    height: 75px;
+    bottom: -75px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 14s;
+            animation-delay: 14s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(12) {
+    position: absolute;
+    right: 270px;
+    width: 140px;
+    height: 140px;
+    bottom: -140px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 14s;
+            animation-delay: 14s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(13) {
+    position: absolute;
+    left: 106.66667px;
+    width: 85px;
+    height: 85px;
+    bottom: -85px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(14) {
+    position: absolute;
+    right: 310px;
+    width: 160px;
+    height: 160px;
+    bottom: -160px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(15) {
+    position: absolute;
+    left: 95px;
+    width: 95px;
+    height: 95px;
+    bottom: -95px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(16) {
+    position: absolute;
+    right: 350px;
+    width: 180px;
+    height: 180px;
+    bottom: -180px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 19s;
+            animation-delay: 19s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(17) {
+    position: absolute;
+    left: 190px;
+    width: 105px;
+    height: 105px;
+    bottom: -105px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(18) {
+    position: absolute;
+    right: 390px;
+    width: 200px;
+    height: 200px;
+    bottom: -200px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(19) {
+    position: absolute;
+    left: 210px;
+    width: 115px;
+    height: 115px;
+    bottom: -115px;
+    -webkit-animation: slideUpMobile 20s infinite;
+            animation: slideUpMobile 20s infinite;
+    -webkit-animation-delay: 21s;
+            animation-delay: 21s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .logInForm {
+    width: 80%;
+  }
+  .formInput {
+    width: 80%;
+  }
+  .formInput:focus {
+    width: 100%;
+  }
+  .formSubmit {
+    width: 80%;
+  }
+  .bubble:nth-child(1) {
+    position: absolute;
+    left: 206px;
+    width: 30px;
+    height: 30px;
+    bottom: -30px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(2) {
+    position: absolute;
+    right: 280px;
+    width: 60px;
+    height: 60px;
+    bottom: -60px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(3) {
+    position: absolute;
+    left: 222.5px;
+    width: 50px;
+    height: 50px;
+    bottom: -50px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(4) {
+    position: absolute;
+    right: 310px;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(5) {
+    position: absolute;
+    left: 237.5px;
+    width: 70px;
+    height: 70px;
+    bottom: -70px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 6s;
+            animation-delay: 6s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(6) {
+    position: absolute;
+    right: 340px;
+    width: 140px;
+    height: 140px;
+    bottom: -140px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 9s;
+            animation-delay: 9s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(7) {
+    position: absolute;
+    left: 305px;
+    width: 90px;
+    height: 90px;
+    bottom: -90px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 11s;
+            animation-delay: 11s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(8) {
+    position: absolute;
+    right: 370px;
+    width: 180px;
+    height: 180px;
+    bottom: -180px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(9) {
+    position: absolute;
+    left: 470px;
+    width: 110px;
+    height: 110px;
+    bottom: -110px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 11s;
+            animation-delay: 11s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(10) {
+    position: absolute;
+    right: 400px;
+    width: 220px;
+    height: 220px;
+    bottom: -220px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(11) {
+    position: absolute;
+    left: 266px;
+    width: 130px;
+    height: 130px;
+    bottom: -130px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 14s;
+            animation-delay: 14s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(12) {
+    position: absolute;
+    right: 430px;
+    width: 260px;
+    height: 260px;
+    bottom: -260px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(13) {
+    position: absolute;
+    left: 395px;
+    width: 150px;
+    height: 150px;
+    bottom: -150px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 17s;
+            animation-delay: 17s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(14) {
+    position: absolute;
+    right: 460px;
+    width: 300px;
+    height: 300px;
+    bottom: -300px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(15) {
+    position: absolute;
+    left: 425px;
+    width: 170px;
+    height: 170px;
+    bottom: -170px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 18s;
+            animation-delay: 18s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(16) {
+    position: absolute;
+    right: 490px;
+    width: 340px;
+    height: 340px;
+    bottom: -340px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(17) {
+    position: absolute;
+    left: 455px;
+    width: 190px;
+    height: 190px;
+    bottom: -190px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(18) {
+    position: absolute;
+    right: 520px;
+    width: 380px;
+    height: 380px;
+    bottom: -380px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bubble:nth-child(19) {
+    position: absolute;
+    left: 342.5px;
+    width: 210px;
+    height: 210px;
+    bottom: -210px;
+    -webkit-animation: slideUpTablet 20s infinite;
+            animation: slideUpTablet 20s infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+/*# sourceMappingURL=style.css.map */

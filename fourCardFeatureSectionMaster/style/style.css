@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+h1,
+h3 {
+  color: #4c4e61;
+}
+
+p {
+  color: #a3a5ae;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fafafa;
+}
+
+.container {
+  width: 80%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headline {
+  width: 50%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.headline .titleThin {
+  font-weight: 200;
+  font-size: 2.8rem;
+}
+
+.headline .titleBold {
+  font-weight: 600;
+  font-size: 2.75rem;
+  margin-bottom: 2.5%;
+}
+
+.headline .titleDesc {
+  width: 80%;
+}
+
+.cardsSection {
+  width: 90%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardsSection .col {
+  width: 100%;
+  height: 100%;
+  padding: 1.25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardsSection .col .card {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 10px 25px -5px #a3a5ae;
+          box-shadow: 0px 10px 25px -5px #a3a5ae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10%;
+  position: relative;
+}
+
+.cardsSection .col .card ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.cardsSection .col .card .label {
+  font-size: 1.45rem;
+  margin-bottom: 1.25%;
+}
+
+.cardsSection .col .card .desc {
+  font-size: 15px;
+  letter-spacing: 0.125px;
+  padding-bottom: 15%;
+}
+
+.cardsSection .col .card .icon {
+  width: 100%;
+  height: 32.5%;
+  min-height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.cardsSection .colOne .card ::before {
+  background-color: #45d3d3;
+}
+
+.cardsSection .colOne .card .icon {
+  background-image: url(../images/icon-supervisor.svg);
+}
+
+.cardsSection .colTwo .card:nth-of-type(1) {
+  margin-bottom: 5%;
+}
+
+.cardsSection .colTwo .card:nth-of-type(1) ::before {
+  background-color: #ea5353;
+}
+
+.cardsSection .colTwo .card:nth-of-type(1) .icon {
+  background-image: url(../images/icon-team-builder.svg);
+}
+
+.cardsSection .colTwo .card:nth-of-type(2) ::before {
+  background-color: #fcaf4a;
+}
+
+.cardsSection .colTwo .card:nth-of-type(2) .icon {
+  background-image: url(../images/icon-karma.svg);
+}
+
+.cardsSection .colThree .card ::before {
+  background-color: #549ef2;
+}
+
+.cardsSection .colThree .card .icon {
+  background-image: url(../images/icon-calculator.svg);
+}
+
+@media (max-width: 1279px) {
+  body {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+  .container {
+    width: 90%;
+    height: 100%;
+  }
+  .headline {
+    width: 100%;
+    height: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .headline .titleThin {
+    font-size: 1.6rem;
+  }
+  .headline .titleBold {
+    font-size: 1.6rem;
+    margin-bottom: 5%;
+  }
+  .headline .titleDesc {
+    width: 100%;
+    padding-left: 2.125%;
+    padding-right: 2.125%;
+  }
+  .cardsSection {
+    width: 100%;
+    height: 70%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cardsSection .col {
+    padding: 0%;
+  }
+  .cardsSection .col:nth-of-type(1) {
+    margin-top: 20%;
+    margin-bottom: 10%;
+  }
+  .cardsSection .col:nth-of-type(3) {
+    margin-top: 10%;
+  }
+  .cardsSection .col .card {
+    padding: 7.5%;
+  }
+  .cardsSection .col .card .label {
+    font-size: 1.2rem;
+    margin-bottom: 1.25%;
+  }
+  .cardsSection .col .card .desc {
+    font-size: 14px;
+    letter-spacing: 0.075px;
+    padding-bottom: 20%;
+  }
+  .cardsSection .col .card .icon {
+    height: 60px;
+    margin-bottom: 10%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+@media (max-width: 1279px) {
+  body {
+    height: 120vh;
+    overflow-y: scroll;
+    background: url(../images/bg-mobile.svg);
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #674baf;
+  }
+  .header {
+    height: 5%;
+    margin-bottom: 10%;
+    background-size: 30%;
+    background-position: 10% bottom;
+  }
+  .main {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 80vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .main .left,
+  .main .right {
+    height: 40%;
+    width: 100%;
+  }
+  .main .left {
+    min-width: 300px;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 15%;
+  }
+  .main .right {
+    padding: 0%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-bottom: 1.25%;
+  }
+  .main .right .title {
+    width: 80%;
+    font-size: clamp(1.65rem, 2vw, 2.4rem);
+  }
+  .main .right .desc {
+    width: 80%;
+    font-size: clamp(1.025rem, 1.25vw, 1.4rem);
+    line-height: 1.625;
+    margin-top: 4.125%;
+    margin-bottom: 5.625%;
+  }
+  .main .right .register {
+    width: 60%;
+    padding: 3.125%;
+  }
+  .footer {
+    height: 8.625%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding-right: 0%;
+  }
+  .footer .social {
+    margin-top: 15%;
+    width: 100%;
+    font-size: 1.025rem;
+  }
+  .footer .social .icon {
+    padding: 0%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

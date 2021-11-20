@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700;200&display=swap");
+
+$Cyan: hsl(179, 62%, 43%);
+$BrightYellow: hsl(71, 73%, 54%);
+$LightGray: hsl(204, 43%, 93%);
+$GrayishBlue: hsl(218, 22%, 67%);
+
+@media (max-width: 1279px) {
+  body {
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    position: relative;
+  }
+
+  .card {
+    width: 90%;
+    height: 90%;
+    height: fit-content;
+
+    overflow: hidden;
+
+    .top,
+    .bottom {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .top {
+      height: 25%;
+
+      flex-direction: column;
+      padding: 6.825%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+
+      .mainTitle {
+        font-size: 1.425rem;
+        margin-bottom: 8.625%;
+      }
+
+      .subTitle {
+        font-size: 1.125rem;
+        margin-bottom: 8.625%;
+      }
+
+      .desc {
+        font-size: 0.965rem;
+        padding-right: 0%;
+        line-height: 1.65;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+      height: 75%;
+
+      .left,
+      .right {
+        height: 100%;
+        width: 100%;
+        padding: 6.125%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+      }
+
+      .left {
+        .subscribeTitle {
+          font-size: 18.125px;
+          letter-spacing: 0.325px;
+        }
+
+        .price {
+          margin-top: 4.625%;
+          margin-bottom: 2.625%;
+
+          font-size: 2.25rem;
+
+          &::after {
+            font-size: 0.925rem;
+            right: 0%;
+            left: 28.625%;
+          }
+        }
+        .access {
+          font-size: 0.925rem;
+          opacity: 0.865;
+          letter-spacing: 0.625px;
+          margin-bottom: 8.625%;
+        }
+
+        .signUp {
+          padding: 5.625%;
+          font-size: 1.025rem;
+        }
+      }
+      .right {
+        .rightTitle {
+          font-size: 18.125px;
+          letter-spacing: 0.425px;
+          margin-bottom: 5.625%;
+        }
+
+        .reasonList {
+          .reason {
+            font-size: 0.925rem;
+            font-weight: 200;
+            letter-spacing: 0.125px;
+            opacity: 0.725;
+            line-height: 1.325;
+          }
+        }
+      }
+    }
+  }
+}

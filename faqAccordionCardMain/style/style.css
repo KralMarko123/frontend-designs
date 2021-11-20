@@ -1,0 +1,333 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/*VARIABLES*/
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+.card {
+  width: 60%;
+  height: 60%;
+  position: relative;
+  background-color: white;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 40px 60px -40px #1d1e35;
+          box-shadow: 0px 40px 60px -40px #1d1e35;
+}
+
+.cardSection {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero {
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 130% 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.woman {
+  position: absolute;
+  top: 16.5%;
+  left: -7%;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.box {
+  position: absolute;
+  z-index: 2;
+  top: 39.5%;
+  left: -8%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.boxShadow {
+  width: 30px;
+  height: 30px;
+  background-color: none;
+  position: absolute;
+  top: 47.5%;
+  left: -0%;
+  -webkit-box-shadow: -20px 20px 40px 5px #1d1e35;
+          box-shadow: -20px 20px 40px 5px #1d1e35;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.faqSection {
+  padding: 5%;
+  padding-left: 0%;
+  padding-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.faqTitle {
+  font-size: 3.4rem;
+  color: #1d1e35;
+  margin-bottom: 10%;
+}
+
+.question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-bottom: solid 1px #e7e7e9;
+  padding-bottom: 5%;
+  margin-bottom: 5%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.question:nth-child(1) ::after {
+  content: "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.";
+}
+
+.question:nth-child(2) ::after {
+  content: "No more than 2GB. All files in your account must fit your allotted storage space.";
+}
+
+.question:nth-child(3) ::after {
+  content: "Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.";
+}
+
+.question:nth-child(4) ::after {
+  content: "Yes! Send us a message and we’ll process your request no questions asked.";
+}
+
+.question:nth-child(5) ::after {
+  content: "Chat and email support is available 24/7. Phone lines are open during normal business hours.";
+}
+
+.question ::after {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #787887;
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.question:hover {
+  cursor: pointer;
+}
+
+.question:hover .questionText {
+  color: #f47c57;
+}
+
+.questionText {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #4a4b5e;
+}
+
+.arrow {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.questionClicked {
+  padding-bottom: 20%;
+}
+
+.questionClicked .questionText {
+  font-weight: 700;
+  color: #1d1e35;
+}
+
+.questionClicked .arrow {
+  -webkit-transform: scale(1.5) rotate(180deg);
+          transform: scale(1.5) rotate(180deg);
+}
+
+.questionClicked ::after {
+  opacity: 1;
+}
+
+@media (max-width: 1279px) {
+  .card {
+    width: 85%;
+    height: 80%;
+    margin-top: 27.5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .shadow {
+    -webkit-box-shadow: 0px 40px 60px -40px #1d1e35;
+            box-shadow: 0px 40px 60px -40px #1d1e35;
+  }
+  .cardSection {
+    width: 100%;
+  }
+  .hero {
+    background-position: 50% 125%;
+    background-size: 65%;
+    position: relative !important;
+    overflow: visible;
+    height: 20%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .woman {
+    position: static;
+    -webkit-transform: scale(0.425) translateY(-45%);
+            transform: scale(0.425) translateY(-45%);
+    overflow: visible;
+  }
+  .box {
+    position: absolute;
+    z-index: 2;
+    top: 39.5%;
+    left: -8%;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+  .boxShadow {
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    position: absolute;
+    top: 47.5%;
+    left: -0%;
+    -webkit-box-shadow: -20px 20px 40px 5px #1d1e35;
+            box-shadow: -20px 20px 40px 5px #1d1e35;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+  .faqSection {
+    padding: 0%;
+    text-align: center;
+    height: 80%;
+    width: 100%;
+  }
+  .faqTitle {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 7.5%;
+  }
+  .questionsContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .question {
+    text-align: start;
+    padding-bottom: 7.5%;
+    margin-bottom: 7.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .question ::after {
+    top: 30%;
+    font-size: 11px;
+  }
+  .questionText {
+    font-size: 13px;
+    letter-spacing: 0px;
+    margin-bottom: 2%;
+  }
+  .arrow {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .questionClicked {
+    padding-bottom: 17.5%;
+  }
+  .questionClicked .arrow {
+    -webkit-transform: scale(1.2) rotate(180deg);
+            transform: scale(1.2) rotate(180deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

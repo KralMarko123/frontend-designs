@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background-color: #ecf2f8;
+}
+
+.card {
+  width: 55%;
+  height: 45%;
+  background-color: white;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 20px 40px -20px #6d7f97;
+          box-shadow: 0px 20px 40px -20px #6d7f97;
+}
+
+.card .left {
+  width: 40%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  background-image: url(../images/drawers.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card .right {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .right .articleTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #48556a;
+  width: 100%;
+}
+
+.card .right .articleText {
+  width: 100%;
+  color: #6d7f97;
+  font-size: 14px;
+  line-height: 1.4em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card .right .authorSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 25%;
+}
+
+.card .right .authorSection .authorPic {
+  width: 100%;
+  max-width: 50px;
+  margin-right: 2.25%;
+  border-radius: 50%;
+}
+
+.card .right .authorSection .authorDesc {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .right .authorSection .authorDesc .authorName {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.125px;
+  margin-bottom: 1.25%;
+  color: #48556a;
+}
+
+.card .right .authorSection .authorDesc .articleDate {
+  font-size: 15px;
+  letter-spacing: 0.125px;
+  color: #9eafc2;
+}
+
+.card .right .authorSection .shareIcon {
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  padding: 2.25%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.card .right .authorSection .shareIcon svg {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.card .right .authorSection .shareIcon:hover {
+  cursor: pointer;
+}
+
+.card .right .shareBox {
+  position: absolute;
+  right: -13.125%;
+  bottom: 37.5%;
+  width: 50%;
+  height: 16.25%;
+  border-radius: 15px;
+  padding: 2.5%;
+  -webkit-box-shadow: 0px 5px 30px -10px #9eafc2;
+          box-shadow: 0px 5px 30px -10px #9eafc2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #48556a;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  display: none;
+}
+
+.card .right .shareBox .shareText {
+  color: #9eafc2;
+  font-size: 15px;
+  letter-spacing: 7.5px;
+}
+
+.card .right .shareBox .icon {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.card .right .shareBox .icon:hover {
+  -webkit-transform: scale(1.5) translateY(-2.5px);
+          transform: scale(1.5) translateY(-2.5px);
+}
+
+.card .right .shareBox ::after {
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-left: -3.75%;
+  width: 22px;
+  height: 22px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #48556a;
+}
+
+.shareBoxShow {
+  opacity: 1 !important;
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+}
+
+@media (max-width: 1279px) {
+  .card {
+    width: 85%;
+    height: 65%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 0%;
+  }
+  .card .left {
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+  }
+  .card .right {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    width: 100%;
+    height: 60%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .card .right .articleTitle {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    width: 85%;
+    height: 30%;
+    margin-top: 5%;
+    margin-bottom: 0;
+  }
+  .card .right .articleText {
+    width: 85%;
+    font-size: 13px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    height: 40%;
+  }
+  .card .right .authorSection {
+    width: 100%;
+    height: 30%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+  }
+  .card .right .authorSection .authorPic {
+    width: 15%;
+    margin-right: 5%;
+  }
+  .card .right .authorSection .authorDesc .authorName {
+    font-size: 15px;
+    letter-spacing: 0.25px;
+    margin-bottom: 1.25%;
+  }
+  .card .right .authorSection .authorDesc .articleDate {
+    font-size: 14px;
+    letter-spacing: 0.175px;
+  }
+  .card .right .authorSection .shareIcon {
+    padding: 3.125%;
+    z-index: 2;
+  }
+  .card .right .authorSection .shareIcon svg {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  .card .right .shareBox {
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .card .right .shareBox .shareText {
+    font-size: 13px;
+    letter-spacing: 6.25px;
+  }
+  .card .right .shareBox .icon {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .card .right .shareBox .icon:nth-child(4) {
+    margin-right: 27.5%;
+  }
+  .card .right .shareBox ::after {
+    display: none;
+  }
+  .shareBoxShow {
+    opacity: 1 !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
