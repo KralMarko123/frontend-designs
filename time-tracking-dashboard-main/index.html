@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="profile">
+        <div class="personal">
+          <img
+            src="./images/image-jeremy.png"
+            alt="profile-image"
+            class="profile__image"
+          />
+          <div class="info">
+            <p>Report for</p>
+            <h1 class="profile__name">Jeremy <br class="break" />Robson</h1>
+          </div>
+        </div>
+        <div class="menu">
+          <p class="menu__option active">Daily</p>
+          <p class="menu__option">Weekly</p>
+          <p class="menu__option">Monthly</p>
+        </div>
+      </div>
+
+      <div class="categories">
+        <!--FIRST ROW-->
+        <div class="categories__first">
+          <div class="category">
+            <div class="category__inner">
+              <div class="inner__first">
+                <span class="category__title">Work</span>
+                <svg
+                  class="elipsis"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="inner__second">
+                <h1 class="hours__current smooth">5hrs</h1>
+                <p class="hours__previous smooth">Yesterday - 7hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <div class="category__inner">
+              <div class="inner__first">
+                <span class="category__title">Play</span>
+                <svg
+                  class="elipsis"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="inner__second">
+                <h1 class="hours__current smooth">1hr</h1>
+                <p class="hours__previous smooth">Yesterday - 2hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <div class="category__inner">
+              <div class="inner__first">
+                <span class="category__title">Study</span>
+                <svg
+                  class="elipsis"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="inner__second">
+                <h1 class="hours__current smooth">0hrs</h1>
+                <p class="hours__previous smooth">Yesterday - 1hr</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--SECOND ROW-->
+        <div class="categories__second">
+          <div class="category">
+            <div class="category__inner">
+              <div class="inner__first">
+                <span class="category__title">Exercise</span>
+                <svg
+                  class="elipsis"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="inner__second">
+                <h1 class="hours__current smooth">1hr</h1>
+                <p class="hours__previous smooth">Yesterday - 1hr</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <div class="category__inner">
+              <div class="inner__first">
+                <span class="category__title">Social</span>
+                <svg
+                  class="elipsis"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="inner__second">
+                <h1 class="hours__current smooth">1hr</h1>
+                <p class="hours__previous smooth">Yesterday - 3hrs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="category">
+            <div class="category__inner">
+              <div class="inner__first">
+                <span class="category__title">Self Care</span>
+                <svg
+                  class="elipsis"
+                  width="21"
+                  height="5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="inner__second">
+                <h1 class="hours__current smooth">0hrs</h1>
+                <p class="hours__previous smooth">Yesterday - 1hr</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <p class="attribution">
+      Challenge by
+      <a
+        target="_blank"
+        href="https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw"
+        >Frontend Mentor</a
+      >
+      Coded by Marko Markovikj
+    </p>
+    <!--SCRIPTS-->
+    <script type="text/javascript" src="./data.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

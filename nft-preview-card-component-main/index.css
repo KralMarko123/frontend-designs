@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+/** VARIABLES */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --card-background: hsl(216, 50%, 16%);
+  --main-background: hsl(217, 54%, 11%);
+  --shadow-dark: hsl(215, 54%, 9%);
+  --shadow-light: hsl(215, 54%, 10%);
+  --line: hsl(215, 32%, 27%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --soft-blue-code: 139, 172, 218;
+  --cyan: hsl(178, 100%, 50%);
+}
+
+/*! RESET */
+
+html {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/** GENERAL STYLES */
+
+.hoverable:hover {
+  cursor: pointer;
+}
+
+body {
+  background-color: var(--main-background);
+  min-height: 100vh;
+  padding: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0px 10px 15px 20px var(--shadow-dark),
+    0px 10px 15px 50px var(--shadow-light);
+  width: 350px;
+  height: fit-content;
+
+  background-color: var(--card-background);
+  border-radius: 20px;
+  padding: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.card__image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+
+  background-image: url(./images/image-equilibrium.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.card__image__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  color: var(--white);
+  opacity: 0;
+
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.card__image:hover .card__image__icon {
+  opacity: 1;
+}
+
+.card__image::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background: var(--cyan);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.card__image:hover::after {
+  opacity: 0.5;
+}
+
+.card__title {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card__title:hover {
+  color: var(--cyan);
+}
+
+.card__desc {
+  color: var(--soft-blue);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.card__values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  position: relative;
+  color: var(--cyan);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+}
+
+.duration {
+  position: relative;
+  color: var(--soft-blue);
+  letter-spacing: 1px;
+}
+
+.price::before {
+  content: url(./images/icon-ethereum.svg);
+  position: absolute;
+  left: -18px;
+}
+
+.duration::before {
+  content: url(./images/icon-clock.svg);
+  position: absolute;
+  left: -25px;
+  top: 1px;
+}
+
+.card__author {
+  border-top: solid 2px rgba(var(--soft-blue-code), 0.15);
+  padding: 1em 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.author__image {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  border: solid 1px var(--white);
+}
+
+.author__desc {
+  color: var(--soft-blue);
+  margin-left: 1rem;
+}
+
+.author__desc span {
+  color: var(--white);
+}
+
+.author__desc span:hover {
+  color: var(--cyan);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+
+  color: var(--white);
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--cyan);
+}
