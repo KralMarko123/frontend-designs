@@ -1,19 +1,146 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700;900&family=Josefin+Sans:wght@400;600&display=swap");
 /*VARIABLES*/
-* {
-  padding: 0;
-  margin: 0;
+/*colors*/
+/*page specific colors*/
+/*text*/
+/*padding & margin*/
+/*misc*/
+/*! RESET */
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
 }
 
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HELPER STYLES */
+.hoverable {
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+/* GENERAL STYLES */
 body {
+  background-color: #171010;
+  width: 100%;
   min-height: 100vh;
-  background-color: #989e8f;
+}
+
+/* INTRO */
+.container {
+  margin: auto;
+  width: 70%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  /* CARDS */
+}
+
+.container .title {
+  margin: 2rem 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(24px, 3vw, 5rem);
+  font-weight: 900;
+}
+
+.container .desc {
+  font-size: clamp(16px, 2vw, 20px);
+  text-align: justify;
+  text-indent: 1em;
+}
+
+.container .focus {
+  color: #f58840;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.container .cards {
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  /*CARD SPECIFIC STYLES*/
+}
+
+.container .cards .card {
+  width: calc(50% - 30px);
+  min-width: 400px;
+  height: 100%;
+  min-height: 300px;
+  position: relative;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px 0px black;
+          box-shadow: 0px 5px 10px 0px black;
+  background: rgba(0, 0, 0, 0.15);
+  background-image: url(./images/sunnyside.jpg);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.container .cards .card .card__inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -95%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -24,72 +151,216 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.container {
-  padding: 1em;
-  max-width: 1200px;
-}
-
-.container h1 {
-  text-align: center;
+.container .cards .card .card__inner .card__title {
+  letter-spacing: 2px;
+  font-size: clamp(16px, 3vw, 24px);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: clamp(1rem, 3vw, 5rem);
-  margin-bottom: 0.15em;
-  color: #161811;
 }
 
-.container .buttonLinks {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
+.container .cards .card .card__inner .card__button {
+  padding: 0.5em 2em;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: clamp(16px, 2vw, 20px);
+  font-family: "Josefin Sans", sans-serif;
+  opacity: 0.75;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.container .buttonLinks .link {
-  min-width: 400px;
-  position: relative;
-  padding: 0.5em;
-  border-radius: 10px;
-  background-color: #6c7355;
-  color: #c1c9cd;
-  font-size: clamp(14px, 2vw, 24px);
-  text-align: center;
+.container .cards .card .card__inner .card__button a {
   text-decoration: none;
-  z-index: 1;
 }
 
-.container .buttonLinks .link:before {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #3b4834;
-  border-radius: 10px;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: -1;
+.container .cards .card .card__inner .card__button:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.container .buttonLinks .link:hover:before {
-  width: 100%;
+.container .cards .card .card__inner .card__button:focus-visible {
+  border: solid 3px #f58840;
+  background-color: white !important;
 }
 
-.container .buttonLinks .link:focus-visible {
-  outline: solid 2px white;
+.container .cards .card .card__inner .card__button:focus-visible a {
+  color: black !important;
 }
 
-.container .buttonLinks .link:focus-visible:before {
-  width: 100%;
+.container .cards .card:hover .card__inner {
+  right: 0;
+}
+
+.container .cards #sunny-side .card__inner {
+  background-color: rgba(25, 83, 107, 0.5);
+}
+
+.container .cards #sunny-side .card__inner .card__button {
+  background-color: #fad400;
+}
+
+.container .cards #sunny-side .card__inner .card__button a {
+  color: #23303e;
+}
+
+.container .cards #time-tracking {
+  background-image: url(./images/timeTracking.jpg);
+}
+
+.container .cards #time-tracking .card__inner {
+  background-color: rgba(15, 20, 36, 0.5);
+}
+
+.container .cards #time-tracking .card__inner .card__button {
+  background-color: #4acf81;
+}
+
+.container .cards #time-tracking .card__inner .card__button a {
+  color: #0f1424;
+}
+
+.container .cards #social-proof {
+  background-image: url(./images/socialProof.jpg);
+}
+
+.container .cards #social-proof .card__inner {
+  background-color: rgba(80, 32, 80, 0.5);
+}
+
+.container .cards #social-proof .card__inner .card__button {
+  background-color: #f7f2f7;
+}
+
+.container .cards #social-proof .card__inner .card__button a {
+  color: #ee68a4;
+}
+
+.container .cards #qr-code {
+  background-image: url(./images/qr.jpg);
+}
+
+.container .cards #qr-code .card__inner {
+  background-color: rgba(54, 133, 255, 0.5);
+}
+
+.container .cards #qr-code .card__inner .card__button {
+  background-color: white;
+}
+
+.container .cards #qr-code .card__inner .card__button a {
+  color: #2c7dfa;
+}
+
+/*! MEDIA QUERIES */
+/* MOBILE */
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+  .container .title {
+    margin: 1rem 0;
+  }
+  .container .desc {
+    text-indent: 0.5em;
+  }
+  .container .cards {
+    margin: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .container .cards .card {
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    min-height: 500px;
+    background-image: url(./images/sunnysideMobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .container .cards .card .card__inner {
+    right: 0;
+  }
+  .container .cards .card .card__inner .card__title {
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 900;
+  }
+  .container .cards .card .card__inner .card__button {
+    padding: 0.5em 1em;
+    font-size: clamp(16px, 2vw, 20px);
+    opacity: 1;
+  }
+  .container .cards #time-tracking {
+    background-image: url(./images/timeTrackingMobile.jpg);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    width: 90%;
+  }
+  .container .title {
+    margin: 1rem 0;
+  }
+  .container .desc {
+    text-indent: 2em;
+  }
+  .container .cards {
+    margin: 1rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .container .cards .card {
+    width: 100%;
+    height: 100%;
+    min-width: 400px;
+    min-height: 300px;
+  }
+  .container .cards .card .card__inner {
+    right: 0;
+  }
+  .container .cards .card .card__inner .card__title {
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 900;
+  }
+  .container .cards .card .card__inner .card__button {
+    padding: 1em 3em;
+    font-size: clamp(16px, 3vw, 24px);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!--HEADER-->
+    <section class="header">
+      <nav class="navbar">
+        <img
+          src="./images/logo.svg"
+          alt="company_logo  "
+          class="navbar__logo"
+        />
+        <ul class="navbar__list">
+          <li class="navbar__list__item hoverable" data-txt="About">About</li>
+          <li class="navbar__list__item hoverable" data-txt="Services">
+            Services
+          </li>
+          <li class="navbar__list__item hoverable" data-txt="Projects">
+            Projects
+          </li>
+          <li class="navbar__contact hoverable">CONTACT</li>
+        </ul>
+        <div class="hamburger disabled">
+          <span id="line-one" class="hamburger__line"></span
+          ><span id="line-two" class="hamburger__line"></span
+          ><span id="line-three" class="hamburger__line"></span>
+        </div>
+      </nav>
+      <h1 class="header__title">WE ARE CREATIVES</h1>
+      <div class="arrow__down"></div>
+      <ul class="mobile__list">
+        <li class="mobile__item" data-txt="About">About</li>
+        <li class="mobile__item" data-txt="Services">Services</li>
+        <li class="mobile__item" data-txt="Projects">Projects</li>
+        <li class="mobile__contact">CONTACT</li>
+      </ul>
+    </section>
+
+    <!--HEROES-->
+    <main class="hero__container">
+      <div class="hero">
+        <div class="hero__info">
+          <h1 class="info__title">Transform your brand</h1>
+          <p class="info__desc">
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <span class="info__learn__more hoverable">LEARN MORE</span>
+        </div>
+        <div class="hero__image"></div>
+      </div>
+
+      <div class="hero">
+        <div class="hero__info">
+          <h1 class="info__title">Stand out to the right audience</h1>
+          <p class="info__desc">
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <span class="info__learn__more hoverable">LEARN MORE</span>
+        </div>
+        <div class="hero__image"></div>
+      </div>
+
+      <div class="hero">
+        <div class="hero__graphic">
+          <h2 class="hero__title">Graphic Design</h2>
+          <p class="hero__desc">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+        <div class="hero__photography">
+          <h2 class="hero__title">Photography</h2>
+          <p class="hero__desc">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!--TESTIMONIALS-->
+    <section class="testimonials">
+      <h1 class="testimonials__title">CLIENT TESTIMONIALS</h1>
+      <div class="testimonials__container">
+        <div class="testimonial">
+          <img
+            src="./images/image-emily.jpg"
+            alt="testimonial-image"
+            class="testimonial__image"
+          />
+          <p class="testimonial__quote">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <h4 class="testimonial__name">Emily R.</h4>
+          <span class="testimonial__position">Marketing Director</span>
+        </div>
+
+        <div class="testimonial">
+          <img
+            src="./images/image-thomas.jpg"
+            alt="testimonial-image"
+            class="testimonial__image"
+          />
+          <p class="testimonial__quote">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <h4 class="testimonial__name">Thomas S.</h4>
+          <span class="testimonial__position">Chief Operating Officer</span>
+        </div>
+
+        <div class="testimonial">
+          <img
+            src="./images/image-jennie.jpg"
+            alt="testimonial-image"
+            class="testimonial__image"
+          />
+          <p class="testimonial__quote">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <h4 class="testimonial__name">Jennie F.</h4>
+          <span class="testimonial__position">Business Owner</span>
+        </div>
+      </div>
+    </section>
+
+    <!--COVERS-->
+    <section class="covers">
+      <div class="covers__first">
+        <div class="cover"></div>
+        <div class="cover"></div>
+      </div>
+
+      <div class="covers__second">
+        <div class="cover"></div>
+        <div class="cover"></div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="footer">
+      <div class="footer__logo"></div>
+      <ul class="footer__list">
+        <li class="footer__item hoverable">About</li>
+        <li class="footer__item hoverable">Services</li>
+        <li class="footer__item hoverable">Projects</li>
+      </ul>
+      <div class="footer__social">
+        <span class="social__link hoverable"></span
+        ><span class="social__link hoverable"></span
+        ><span class="social__link hoverable"></span
+        ><span class="social__link hoverable"></span>
+      </div>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="./index.js"></script>
+  </body>
+</html>
