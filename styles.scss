@@ -24,6 +24,14 @@ $qrcode-bg: #3685ff;
 $qrcode-button: white;
 $qrcode-link: #2c7dfa;
 
+$nft-bg: hsl(217, 54%, 11%);
+$nft-button: hsl(215, 51%, 70%);
+$nft-link: hsl(216, 50%, 16%);
+
+$article-bg: #2f6859;
+$article-button: #865627;
+$article-link: white;
+
 /*text*/
 $fraunces: "Fraunces", serif;
 $josefin-sans: "Josefin Sans", sans-serif;
@@ -290,6 +298,36 @@ body {
         }
       }
     }
+
+    #nft {
+      background-image: url(./images/nft.jpg);
+      .card__inner {
+        background-color: rgba($color: $nft-bg, $alpha: 0.5);
+
+        .card__button {
+          background-color: rgba($color: $nft-button, $alpha: 1);
+
+          a {
+            color: $nft-link;
+          }
+        }
+      }
+    }
+
+    #article {
+      background-image: url(./images/article.jpg);
+      .card__inner {
+        background-color: rgba($color: $article-bg, $alpha: 0.5);
+
+        .card__button {
+          background-color: rgba($color: $article-button, $alpha: 1);
+
+          a {
+            color: $article-link;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -349,6 +387,14 @@ body {
 
       #time-tracking {
         background-image: url(./images/timeTrackingMobile.jpg);
+      }
+
+      #social-proof {
+        background-image: url(./images/socialProofMobile.jpg);
+      }
+
+      #article {
+        background-image: url(./images/articleMobile.jpg);
       }
     }
   }

@@ -258,6 +258,38 @@ body {
   color: #2c7dfa;
 }
 
+.container .cards #nft {
+  background-image: url(./images/nft.jpg);
+}
+
+.container .cards #nft .card__inner {
+  background-color: rgba(13, 25, 43, 0.5);
+}
+
+.container .cards #nft .card__inner .card__button {
+  background-color: #8bacda;
+}
+
+.container .cards #nft .card__inner .card__button a {
+  color: #14253d;
+}
+
+.container .cards #article {
+  background-image: url(./images/article.jpg);
+}
+
+.container .cards #article .card__inner {
+  background-color: rgba(47, 104, 89, 0.5);
+}
+
+.container .cards #article .card__inner .card__button {
+  background-color: #865627;
+}
+
+.container .cards #article .card__inner .card__button a {
+  color: white;
+}
+
 /*! MEDIA QUERIES */
 /* MOBILE */
 @media (max-width: 767px) {
@@ -312,6 +344,12 @@ body {
   }
   .container .cards #time-tracking {
     background-image: url(./images/timeTrackingMobile.jpg);
+  }
+  .container .cards #social-proof {
+    background-image: url(./images/socialProofMobile.jpg);
+  }
+  .container .cards #article {
+    background-image: url(./images/articleMobile.jpg);
   }
 }
 
